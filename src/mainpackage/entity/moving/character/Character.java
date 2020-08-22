@@ -4,9 +4,14 @@ import mainpackage.entity.moving.Moving;
 import mainpackage.positioning.Coordinate;
 import mainpackage.positioning.Direction;
 
+import lc.kra.system.keyboard.GlobalKeyboardHook;
+import lc.kra.system.keyboard.event.GlobalKeyAdapter;
+import lc.kra.system.keyboard.event.GlobalKeyEvent;
 
+import java.util.Map;
 
-public class Character extends Moving /*implements KeyListener */{
+public class Character extends Moving{
+    private static boolean run;
     /**
      * Constructor for Character
      * @param position super
@@ -25,6 +30,7 @@ public class Character extends Moving /*implements KeyListener */{
      * Unit moves in the wanted direction
      */
     public void move(Direction d) {
+        this.position.update(d);
         System.out.println(d);
     }
 
@@ -43,7 +49,62 @@ public class Character extends Moving /*implements KeyListener */{
      */
     @Override
     public void decide() {
-        if(canMove() == 0) {
+        run = true;
+        GlobalKeyboardHook keyboardHook = new GlobalKeyboardHook(false);     /*for (Map.Entry<Long, String> keyboard : GlobalKeyboardHook.listKeyboards().entrySet())
+            System.out.format("%d: %s\n", keyboard.getKey(), keyboard.getValue());*/
+        keyboardHook.addKeyListener(new GlobalKeyAdapter() {
+            @Override
+            public void keyPressed(GlobalKeyEvent event) {
+                System.out.println(event);
+                /*for(Map.Entry<Long,String> keyboard:GlobalKeyboardHook.listKeyboards().entrySet())
+                    System.out.format("%d: %s\n", keyboard.getKey(), keyboard.getValue());*/
+                switch (event.getVirtualKeyCode()) {
+                    case GlobalKeyEvent.VK_LEFT:
+                    case GlobalKeyEvent.VK_NUMPAD4:
+                        System.out.println("Left");
+                        move(Direction.WEST);
+                        break;
+                    case GlobalKeyEvent.VK_UP:
+                    case GlobalKeyEvent.VK_NUMPAD8:
+                        System.out.println("up");
+                        move(Direction.NORTH);
+                        break;
+                    case GlobalKeyEvent.VK_RIGHT:
+                    case GlobalKeyEvent.VK_NUMPAD6:
+                        System.out.println("Right");
+                        move(Direction.EAST);
+                        break;
+                    case GlobalKeyEvent.VK_DOWN:
+                    case GlobalKeyEvent.VK_NUMPAD2:
+                        System.out.println("down");
+                        move(Direction.SOUTH);
+                        break;
+                    case GlobalKeyEvent.VK_E:
+                        //TODO Ajouter Menu
+                        System.out.println("Inventory");
+                        break;
+                    case GlobalKeyEvent.VK_A:
+                        //TODO Ajouter Attaque
+                        System.out.println("Assault");
+                        break;
+                    default:
+                }
+            }
+
+            @Override
+            public void keyReleased(GlobalKeyEvent event) {
+                System.out.println(event);
+                run=false;
+            }
+        });
+
+        try {
+            while (run) Thread.sleep(128);
+        } catch (InterruptedException e) { /* nothing to do here*/  } finally {
+            keyboardHook.shutdownHook();
+        }
+
+        /*if(canMove() == 0) {
             int i = 0;
             switch (line) {
                 /*case KeyEvent.VK_LEFT | KeyEvent.VK_NUMPAD4:
@@ -57,7 +118,7 @@ public class Character extends Moving /*implements KeyListener */{
                     break;
                 case KeyEvent.VK_DOWN | KeyEvent.VK_NUMPAD2:
                     move(Direction.SOUTH);
-                    break;*/
+                    break;
                 case "E":
                 case "e":
                     //TODO Ajouter Menu
@@ -72,7 +133,7 @@ public class Character extends Moving /*implements KeyListener */{
                 default:
                     throw new IllegalStateException("Unexpected value: " + line);
             }
-        }
+        }*/
     }
 
     /**

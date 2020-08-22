@@ -31,10 +31,14 @@ public class Play implements Runnable {
         map.map[5][11] = me;
         System.out.println(map);
         start();
-        //addKeyListener(me);
-        /*for (int i = 0;i < 5;i++){
+        for (int i = 0;i < 5;i++){
+            System.out.printf("%d : Waiting\n",i);
             me.decide();
-        }*/
+            System.out.println("done");
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println(map);
+        }
 
     }
 
@@ -51,24 +55,11 @@ public class Play implements Runnable {
        Play play = new Play();
     }
 
-    /**
+    /*
      * currently testing
      */
     @Override
     public void run() {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        while(!me.line.equalsIgnoreCase("quit")){
-            try {
-                me.line = in.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            me.decide();
-        }
-        try {
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 }

@@ -1,6 +1,6 @@
 /out/
 /.idea/
-/*/*.xml
+/.idea/workspace.xml
 /*/*/*.xml
 /src/META-INF/
 .gitignore
