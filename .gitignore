@@ -1,5 +1,4 @@
 /out/
 /.idea/
-/.idea/dictionaries/
-/.idea/codeStyles/
-/.idea/artifacts/
+/*/*.xml
+/*/*/*.xml
