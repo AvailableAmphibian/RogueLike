@@ -32,8 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e4bc766-c32e-40e6-929c-606f162f49d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +105,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Play" />
@@ -146,7 +156,7 @@
       <workItem from="1598028599795" duration="2078000" />
       <workItem from="1598031066073" duration="2488000" />
       <workItem from="1598079659263" duration="2843000" />
-      <workItem from="1598082717754" duration="1206000" />
+      <workItem from="1598082717754" duration="1857000" />
     </task>
     <task id="LOCAL-00001" summary="Test about author name">
       <created>1598082275175</created>
@@ -169,7 +179,7 @@
             <State>
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
-                  <entry key="Show.Git.Branches" value="false" />
+                  <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
               <option name="FILTERS">
