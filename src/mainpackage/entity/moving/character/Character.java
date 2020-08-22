@@ -8,8 +8,6 @@ import lc.kra.system.keyboard.GlobalKeyboardHook;
 import lc.kra.system.keyboard.event.GlobalKeyAdapter;
 import lc.kra.system.keyboard.event.GlobalKeyEvent;
 
-import java.util.Map;
-
 public class Character extends Moving{
     private static boolean run;
     /**
@@ -50,6 +48,7 @@ public class Character extends Moving{
     @Override
     public void decide() {
         run = true;
+        //if(canMove() == 0) {
         GlobalKeyboardHook keyboardHook = new GlobalKeyboardHook(false);     /*for (Map.Entry<Long, String> keyboard : GlobalKeyboardHook.listKeyboards().entrySet())
             System.out.format("%d: %s\n", keyboard.getKey(), keyboard.getValue());*/
         keyboardHook.addKeyListener(new GlobalKeyAdapter() {
@@ -80,11 +79,11 @@ public class Character extends Moving{
                         move(Direction.SOUTH);
                         break;
                     case GlobalKeyEvent.VK_E:
-                        //TODO Ajouter Menu
+                        //TODO Add Menu
                         System.out.println("Inventory");
                         break;
                     case GlobalKeyEvent.VK_A:
-                        //TODO Ajouter Attaque
+                        //TODO Add attacking move
                         System.out.println("Assault");
                         break;
                     default:
@@ -99,41 +98,11 @@ public class Character extends Moving{
         });
 
         try {
-            while (run) Thread.sleep(128);
+            while (run) //noinspection BusyWait
+                Thread.sleep(128);
         } catch (InterruptedException e) { /* nothing to do here*/  } finally {
             keyboardHook.shutdownHook();
         }
-
-        /*if(canMove() == 0) {
-            int i = 0;
-            switch (line) {
-                /*case KeyEvent.VK_LEFT | KeyEvent.VK_NUMPAD4:
-                    move(Direction.WEST);
-                    break;
-                case KeyEvent.VK_UP | KeyEvent.VK_NUMPAD8:
-                    move(Direction.NORTH);
-                    break;
-                case KeyEvent.VK_RIGHT | KeyEvent.VK_NUMPAD6:
-                    move(Direction.EAST);
-                    break;
-                case KeyEvent.VK_DOWN | KeyEvent.VK_NUMPAD2:
-                    move(Direction.SOUTH);
-                    break;
-                case "E":
-                case "e":
-                    //TODO Ajouter Menu
-                    System.out.println("Inventory");
-                    break;
-
-                case "A":
-                case "a":
-                    //TODO Ajouter Attaque
-                    System.out.println("Assault");
-                    break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + line);
-            }
-        }*/
     }
 
     /**
