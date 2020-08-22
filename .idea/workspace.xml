@@ -11,28 +11,18 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:test" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e4bc766-c32e-40e6-929c-606f162f49d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4e4bc766-c32e-40e6-929c-606f162f49d3" name="Default Changelist" comment=".gitignore added">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -187,7 +182,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="test" />
                       </list>
                     </value>
                   </entry>
@@ -274,10 +269,10 @@
     <state x="530" y="115" key="FileChooserDialogImpl/62.0.1474.864/-3840.-1064.3072.1728@62.0.1474.864" timestamp="1594832188148" />
     <state x="530" y="115" key="FileChooserDialogImpl/62.0.1474.864/-3840.-1430.3072.1728@62.0.1474.864" timestamp="1598083831830" />
     <state x="530" y="131" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1593424502036" />
-    <state x="657" y="305" key="Github.ShareDialog" timestamp="1598083706961">
+    <state x="657" y="305" key="Github.ShareDialog" timestamp="1598085729020">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="657" y="305" key="Github.ShareDialog/62.0.1474.864/-3840.-1430.3072.1728@62.0.1474.864" timestamp="1598083706961" />
+    <state x="657" y="305" key="Github.ShareDialog/62.0.1474.864/-3840.-1430.3072.1728@62.0.1474.864" timestamp="1598085729020" />
     <state x="575" y="62" key="Github.UntrackedFilesDialog" timestamp="1598032089918">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
