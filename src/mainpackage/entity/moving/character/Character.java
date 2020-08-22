@@ -7,23 +7,40 @@ import mainpackage.positioning.Direction;
 
 
 public class Character extends Moving /*implements KeyListener */{
+    /**
+     * Constructor for Character
+     * @param position super
+     */
     public Character(Coordinate position) {
         super(position, 60, 10);
     }
+
 
     @Override
     public void move() {
 
     }
 
+    /**
+     * Unit moves in the wanted direction
+     */
     public void move(Direction d) {
         System.out.println(d);
     }
+
+    /**
+     *
+     * @return 0 if there is no foe in the adjacent tiles
+     *         1 if there is a a foe on any adjacent tile
+     */
     @Override
     public int canMove() {
         return 0;
     }
 
+    /**
+     * Deciding method using cooked mode input
+     */
     @Override
     public void decide() {
         if(canMove() == 0) {
@@ -58,6 +75,10 @@ public class Character extends Moving /*implements KeyListener */{
         }
     }
 
+    /**
+     * Interaction with a character
+     * @param c is an adjacent character
+     */
     @Override
     public void actWithCharacter(Character c) {
 
@@ -83,11 +104,9 @@ public class Character extends Moving /*implements KeyListener */{
                 move(Direction.SOUTH);
                 break;
             case KeyEvent.VK_E:
-                //TODO Ajouter Menu
                 System.out.println("Inventory");
                 break;
             case KeyEvent.VK_A:
-                //TODO Ajouter Attaque
                 System.out.println("Assault");
                 break;
         }
@@ -110,11 +129,9 @@ public class Character extends Moving /*implements KeyListener */{
                 move(Direction.SOUTH);
                 break;
             case KeyEvent.VK_E:
-                //TODO Ajouter Menu
                 System.out.println("Inventory");
                 break;
             case KeyEvent.VK_A:
-                //TODO Ajouter Attaque
                 System.out.println("Assault");
                 break;
         }
@@ -137,11 +154,9 @@ public class Character extends Moving /*implements KeyListener */{
                 move(Direction.SOUTH);
                 break;
             case KeyEvent.VK_E:
-                //TODO Ajouter Menu
                 System.out.println("Inventory");
                 break;
             case KeyEvent.VK_A:
-                //TODO Ajouter Attaque
                 System.out.println("Assault");
                 break;
         }

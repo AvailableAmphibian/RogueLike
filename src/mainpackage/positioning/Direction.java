@@ -11,12 +11,27 @@ public enum Direction {
     SOUTHWEST(new Coordinate(-1,1));
 
     private Coordinate update;
+
+    /**
+     * Getter for update
+     * @return update
+     */
     public Coordinate getUpdate() {
         return update;
     }
+
+    /**
+     * Constructor for Direction
+     * @param update direction on xy axis
+     */
     Direction(Coordinate update) {
         this.update = update;
     }
+
+    /**
+     * Static method used to get only the NESW directions
+     * @return an array with the needed Directions
+     */
     private static Direction[] getWindRose(){
         return new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
     }

@@ -6,6 +6,10 @@ public abstract class Entity {
     protected Coordinate position;
     public String line;
 
+    /**
+     * Super Constructor needed for every entity being e.g. a monster, the character or a stair
+     * @param position is the position an entity will have
+     */
     public Entity(Coordinate position) {
         this.position = position;
         line = "";
@@ -19,6 +23,10 @@ public abstract class Entity {
         this.position = position;
     }
 
+    /**
+     * Interaction with a character
+     * @param c is the character you are interacting with
+     */
     public abstract void actWithCharacter(mainpackage.entity.moving.character.Character c);
     public abstract void decide();
 }

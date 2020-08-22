@@ -3,7 +3,14 @@ package mainpackage.entity.motionless;
 import mainpackage.entity.moving.character.Character;
 import mainpackage.positioning.Coordinate;
 
+/**
+ * Can't move through them
+ */
 public class Wall extends Motionless {
+    /**
+     * Constructor
+     * @param position super
+     */
     public Wall(Coordinate position) {
         super(position);
     }

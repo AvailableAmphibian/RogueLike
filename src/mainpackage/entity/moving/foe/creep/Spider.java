@@ -4,7 +4,14 @@ package mainpackage.entity.moving.foe.creep;
 import mainpackage.entity.moving.character.Character;
 import mainpackage.positioning.Coordinate;
 
+/**
+ * Foes that moves randomly in any Direction
+ */
 public class Spider extends Creep {
+    /**
+     * Constructor
+     * @param position super
+     */
     public Spider(Coordinate position) {
         super(position, 30, 10);
     }

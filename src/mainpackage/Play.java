@@ -17,6 +17,10 @@ public class Play implements Runnable {
     Entity me;
     boolean running;
 
+
+    /**
+     * Constructor for our RogueLike, this is the only method called in the main()
+     */
     public Play(){
         seed = (new Random()).nextLong();
         rnd = new Random(seed);
@@ -34,15 +38,22 @@ public class Play implements Runnable {
 
     }
 
+    /**
+     * Currently testing
+     */
     private synchronized void start() {
         running = true;
         thread.start();
     }
 
+
     public static void main(String[] args){
        Play play = new Play();
     }
 
+    /**
+     * currently testing
+     */
     @Override
     public void run() {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
