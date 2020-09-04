@@ -28,5 +28,5 @@ public abstract class Entity {
      * @param c is the character you are interacting with
      */
     public abstract void actWithCharacter(mainpackage.entity.moving.character.Character c);
-    public abstract void decide();
+    public abstract int decide();
 }

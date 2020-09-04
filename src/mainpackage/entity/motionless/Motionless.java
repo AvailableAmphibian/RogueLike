@@ -12,7 +12,7 @@ public abstract class Motionless extends Entity {
         super(position);
     }
     @Override
-    public void decide() {
-
+    public int decide() {
+        return 0;
     }
 }

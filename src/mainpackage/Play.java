@@ -5,10 +5,8 @@ import mainpackage.entity.moving.character.Character;
 import mainpackage.map.Map;
 import mainpackage.positioning.Coordinate;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Play implements Runnable {
     static long seed;
@@ -31,15 +29,15 @@ public class Play implements Runnable {
         map.map[5][11] = me;
         System.out.println(map);
         start();
-        for (int i = 0;i < 5;i++){
-            System.out.printf("%d : Waiting\n",i);
-            me.decide();
-            System.out.println("done");
+        int i = 0;
+        while (i < 5) {
+            System.out.println(i);
+            AtomicInteger a = new AtomicInteger(me.decide());
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println(map);
+            if(a.get() ==0) i++;
         }
-
     }
 
     /**

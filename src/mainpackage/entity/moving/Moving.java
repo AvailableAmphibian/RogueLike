@@ -64,7 +64,8 @@ public abstract class Moving extends Entity {
 
     /**
      * Method created to make a unit choose a move to do during their turn
+     * @return a value described in the unit's  method
      */
-    public abstract void decide();
+    public abstract int decide();
 
 }

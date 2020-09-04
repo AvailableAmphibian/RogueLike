@@ -27,8 +27,8 @@ public class Boss extends Moving {
     }
 
     @Override
-    public void decide() {
-
+    public int decide() {
+        return 0;
     }
 
     @Override

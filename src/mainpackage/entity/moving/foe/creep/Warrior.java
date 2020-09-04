@@ -26,7 +26,8 @@ public class Warrior  extends Creep {
     }
 
     @Override
-    public void decide() {
+    public int decide() {
+        return 0;
 
     }
 
